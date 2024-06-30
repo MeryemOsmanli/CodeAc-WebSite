@@ -1,0 +1,207 @@
+.login_background {
+    .login_section {
+      .login_sec_img {
+        position: relative;
+        width: 100%;
+        height: 420px;
+        cursor: pointer;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+        .overlay_login {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          width: 100%;
+          min-height: 100%;
+          background-color: rgba(0, 0, 0, 0.3);
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          .overlay_text_box {
+            max-width: 500px;
+            font-family: "Bad Script", cursive;
+            text-align: center;
+            font-weight: 400;
+            color: white;
+            font-size: 25px;
+          }
+        }
+      }
+    }
+    .contact_form_background {
+      padding: 5rem 0;
+      max-width: 70%;
+      .contact_form {
+        background-color: rgba(254, 78, 172, 0.3);
+        border-radius: 5px;
+        .contact_form_text {
+          min-height: 150px;
+          text-align: center;
+          padding: 2rem 0;
+          i {
+            background-color: rgb(255, 141, 160);
+            color: white;
+            padding: 0.75rem;
+            font-size: 1.5rem;
+            border-radius: 10px;
+          }
+          h1 {
+            font-size: 40px;
+            color: rgb(33, 37, 41);
+          }
+          p {
+            font-size: 20px;
+            color: gray;
+          }
+        }
+        .form_content {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1rem 0;
+          .input_box {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            ::placeholder {
+              color: gray;
+              opacity: 1; /* Firefox */
+            }
+  
+            ::-ms-input-placeholder {
+              /* Edge 12-18 */
+              color: gray;
+            }
+            gap: 10px;
+            input {
+              width: 100%;
+              padding: 0.75rem;
+              border: 1px solid rgb(176, 176, 176);
+              border-radius: 5px;
+            }
+            div {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+  
+              button {
+                width: 50%;
+                padding: 0.75rem;
+                border: none;
+                border-radius: 20px;
+                background-color: rgb(255, 141, 160);
+                color: white;
+                margin: 10px;
+                cursor: pointer;
+                a {
+                  color: white;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+        .bogurtlen {
+          width: 20%;
+          height: 80px;
+          position: relative;
+          top: 0;
+          animation: moveUpDown 2s infinite alternate;
+        }
+        @keyframes moveUpDown {
+          0% {
+            top: 0;
+          }
+          100% {
+            top: 20px;
+          }
+        }
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 880px) {
+    .login_background {
+      .login_section {
+        .login_sec_img {
+          height: 230px;
+          .contact_form_background {
+            padding: 6rem 0;
+            .contact_form {
+              .contact_form_text {
+                padding: 1rem 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .login_background {
+      .login_section {
+        .login_sec_img {
+          height: 100px;
+          .overlay_login {
+            .overlay_text_box {
+              text-align: center;
+              span {
+                font-size: 10px;
+              }
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .contact_form_background.container {
+        padding: 0;
+      }
+      .contact_form_background {
+        max-width: 100%;
+        .contact_form {
+          .contact_form_text {
+            padding: 1rem 0;
+            i {
+              padding: 0.65rem;
+              font-size: 1rem;
+            }
+            h1 {
+              font-size: 25px;
+              padding: 0.5rem;
+            }
+            p {
+              font-size: 17px;
+            }
+          }
+          .form_content {
+            padding: 1rem 0;
+            .input_box {
+              width: 80%;
+  
+              input {
+                padding: 0.75rem;
+              }
+              div {
+                button {
+                  font-size: 15px;
+                  padding: 0.5rem;
+                }
+              }
+            }
+          }
+          .bogurtlen {
+            width: 30%;
+            height: 100px;
+            img {
+              height: 80%;
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }

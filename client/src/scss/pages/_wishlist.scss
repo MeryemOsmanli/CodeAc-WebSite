@@ -1,0 +1,233 @@
+.header_image_wishList {
+    background-image: url("https://dt-faryita.myshopify.com/cdn/shop/files/breadcrumb_bc57e145-dc2e-410c-9c11-4c22d1a357eb.png?v=1655187");
+    background-color: #FBDB1A;
+    // background-color: rgb(255, 255, 0);
+    width: 100%;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    position: relative;
+    .overlay_shop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Josefin Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      text-align: center;
+      width: 100%;
+      min-height: 100%;
+      color: rgb(63, 87, 14);
+      letter-spacing: 5px;
+      font-size: 50px;
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+  .wishList_section {
+    // background-color: yellow;
+    background-color: #FBDB1A;
+    .wishList_container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .wishList_left_image {
+        width: 10%;
+        min-height: 500px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .wishList_data_container {
+        width: 80%;
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2rem 0;
+        gap: 4rem;
+        .wishList_box {
+          width: 60%;
+          color: white;
+          padding: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 1rem;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          animation-name: fadeIn;
+          -webkit-animation-name: fadeIn;
+          animation-duration: 2s;
+          -webkit-animation-duration: 1s;
+          animation-timing-function: ease-in-out;
+          -webkit-animation-timing-function: ease-in-out;
+          visibility: visible !important;
+          animation-iteration-count: 1;
+          background-color: orange;
+  
+          @keyframes fadeIn {
+            0% {
+              transform: scale(0);
+              opacity: 0;
+            }
+            60% {
+              transform: scale(1.1);
+            }
+            80% {
+              transform: scale(0.9);
+              opacity: 1;
+            }
+            100% {
+              transform: scale(1);
+              opacity: 1;
+            }
+          }
+          .wishList_data_image {
+            width: 200px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+              width: 80%;
+              height: 85%;
+            }
+          }
+          .wishList_box_text {
+            h5 {
+              font-size: 35px;
+              padding-bottom: 1rem;
+              font-family: "Bad Script", cursive;
+              font-weight: 400;
+            }
+            h4 {
+              margin-top: 2rem;
+            }
+            button {
+              border: 2px solid white;
+              background-color: orange;
+              padding: 0.5rem 1.2rem;
+              border-radius: 20px;
+              color: white;
+            }
+          }
+          .wishList_box_btns {
+            display: flex;
+            gap: 2rem;
+            .wishList_box_left_btns {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              gap: 20px;
+            }
+            .wishList_box_right_icon {
+              font-size: 30px;
+              margin-bottom: 8rem;
+            div{
+              cursor: pointer;
+            }
+             
+            }
+          }
+        }
+      }
+      .wishList_right_box {
+        width: 10%;
+      }
+    }
+  }
+  @media only screen and (max-width: 880px) {
+    .header_image_wishList {
+      min-height: 300px;
+      .overlay_shop {
+        font-size: 40px;
+      }
+    }
+    .wishList_section {
+      .wishList_container {
+        .wishList_data_container {
+          gap: 2rem;
+          width: 90%;
+          .wishList_box {
+            width: 80%;
+            .wishList_data_image {
+              width: 180px;
+              height: 160px;
+            }
+            .wishList_box_text {
+              h5 {
+                font-size: 30px;
+              }
+            }
+            .wishList_box_btns {
+              .wishList_box_right_icon {
+                font-size: 30px;
+                margin-bottom: 8rem;
+              }
+            }
+          }
+        }
+        .wishList_right_box {
+          width: 10%;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 340px) {
+    .header_image_wishList {
+      min-height: 200px;
+      .overlay_shop {
+        font-size: 30px;
+      }
+    }
+    .wishList_section {
+      .wishList_container {
+        min-height: 300px;
+        .wishList_data_container {
+          gap: 2rem;
+          width: 100%;
+          .wishList_box {
+            width: 95%;
+            padding: 0.5rem;
+            .wishList_data_image {
+              width: 120px;
+              height: 100px;
+              justify-content: space-between;
+              img {
+                width: 82%;
+                height: 87%;
+              }
+            }
+            .wishList_box_text {
+              h5 {
+                font-size: 17px;
+                padding-bottom: 0rem;
+              }
+  
+              button {
+                border: 1px solid white;
+                padding: 0.3rem 0.5rem;
+                font-size: 11px;
+              }
+            }
+            .wishList_box_btns {
+              .wishList_box_right_icon {
+                font-size: 20px;
+                margin-bottom: 7rem;
+              }
+            }
+          }
+        }
+        .wishList_right_box {
+          width: 7%;
+        }
+      }
+    }
+  }

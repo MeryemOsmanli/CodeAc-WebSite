@@ -1,0 +1,325 @@
+.checkout_background {
+    background-color: powderblue;
+    .checkout_contain {
+      display: flex;
+      .checkout_left_section {
+        width: 60%;
+        padding: 2rem;
+        .checkout_email_box {
+          h4 {
+            color: grey;
+          }
+          div {
+            width: 100%;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            input {
+              width: 90%;
+              height: 50px;
+              border-radius: 10px;
+              border: 1px solid gray;
+              padding: 1rem;
+            }
+          }
+        }
+        .checkout_delivery_box {
+          h4 {
+            color: grey;
+          }
+          div {
+            width: 100%;
+            padding: 1rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            input {
+              width: 90%;
+              height: 50px;
+              border-radius: 10px;
+              border: 1px solid gray;
+              padding: 1rem;
+            }
+            .checkout_name_box {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              #name {
+                width: 46%;
+              }
+              #lastname {
+                width: 46%;
+              }
+            }
+          }
+        }
+        .checkout_pay_btn {
+          width: 100%;
+          padding: 1rem 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          button {
+            width: 90%;
+            padding: 0.75rem;
+            border-radius: 10px;
+            border: 1px solid grey;
+            background-color: rgb(41, 169, 186);
+            color: white;
+          }
+        }
+      }
+      .checkout_right_section {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        // position: relative;
+        gap: 50px;
+        .checkout_product_box {
+          display: flex;
+          width: 100%;
+          height: 120px;
+          padding: 1rem;
+          animation-name: fadeIn;
+          -webkit-animation-name: fadeIn;
+          animation-duration: 2s;
+          -webkit-animation-duration: 1.5s;
+          animation-timing-function: ease-in-out;
+          -webkit-animation-timing-function: ease-in-out;
+          visibility: visible !important;
+          animation-iteration-count: 1;
+  
+          @keyframes fadeIn {
+            0% {
+              transform: scale(0);
+              opacity: 0;
+            }
+            60% {
+              transform: scale(1.1);
+            }
+            80% {
+              transform: scale(0.9);
+              opacity: 1;
+            }
+            100% {
+              transform: scale(1);
+              opacity: 1;
+            }
+          }
+          .checkout_product_img {
+            width: 25%;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+              width: 80%;
+              height: 80%;
+            }
+          }
+          .checkout_product_text {
+            width: 75%;
+            height: 120px;
+            color: rgb(92, 92, 92);
+            padding: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid grey;
+  
+            .product_name_subtotal {
+              h5 {
+                font-size: 25px;
+                font-family: "Bad Script", cursive;
+                font-weight: 400;
+                color: black;
+              }
+              p {
+                padding: 0.5rem 0;
+              }
+            }
+            .product_price-count {
+              span {
+                font-weight: 700;
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 880px) {
+    .checkout_background {
+      .checkout_contain {
+        .checkout_left_section {
+          padding: 1rem;
+          .checkout_email_box {
+            h4 {
+              font-size: 20px;
+            }
+            div {
+              padding: 1rem;
+              input {
+                height: 40px;
+              }
+            }
+          }
+          .checkout_delivery_box {
+            h4 {
+              font-size: 20px;
+            }
+            div {
+              gap: 10px;
+              input {
+                height: 40px;
+              }
+              .checkout_name_box {
+                #name {
+                  width: 48%;
+                }
+                #lastname {
+                  width: 48%;
+                }
+              }
+            }
+          }
+          .checkout_pay_btn {
+            button {
+              letter-spacing: 2px;
+              padding: 0.5rem;
+            }
+          }
+        }
+        .checkout_right_section {
+          width: 50%;
+          h4 {
+            font-size: 21px;
+          }
+          gap: 30px;
+          .checkout_product_box {
+            padding: 1rem 0;
+            .checkout_product_img {
+              width: 26%;
+              height: 90px;
+            }
+            .checkout_product_text {
+              width: 74%;
+              padding: 1rem;
+              .product_name_subtotal {
+                h5 {
+                  font-size: 18px;
+                }
+                p {
+                  font-size: 13px;
+                }
+              }
+              .product_price-count {
+                p {
+                  font-size: 13px;
+                }
+                span {
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .checkout_background {
+      .checkout_contain {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        gap: 50px;
+        .checkout_left_section {
+          border-top: 1px solid grey;
+  
+          width: 100%;
+          padding: 1rem;
+          .checkout_email_box {
+            h4 {
+              font-size: 20px;
+            }
+            div {
+              padding: 1rem;
+              input {
+                width: 100%;
+                height: 40px;
+              }
+            }
+          }
+          .checkout_delivery_box {
+            h4 {
+              font-size: 20px;
+            }
+            div {
+              gap: 10px;
+              input {
+                width: 100%;
+                height: 40px;
+              }
+              .checkout_name_box {
+                padding: 0;
+                #name {
+                  width: 100%;
+                }
+                #lastname {
+                  width: 100%;
+                }
+              }
+            }
+          }
+          .checkout_pay_btn {
+            button {
+              width: 100%;
+              padding: 0.5rem;
+              letter-spacing: 2px;
+            }
+          }
+        }
+        .checkout_right_section {
+          width: 100%;
+          h4 {
+            font-size: 20px;
+            padding: 0.2rem 1rem;
+          }
+          gap: 30px;
+          .checkout_product_box {
+            padding: 1rem 0;
+  
+            .checkout_product_img {
+              width: 30%;
+              height: 90px;
+            }
+            .checkout_product_text {
+              width: 74%;
+              padding: 1rem;
+              .product_name_subtotal {
+                h5 {
+                  font-size: 16px;
+                }
+                p {
+                  font-size: 11px;
+                }
+              }
+              .product_price-count {
+                p {
+                  font-size: 11px;
+                }
+                span {
+                  font-size: 11px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

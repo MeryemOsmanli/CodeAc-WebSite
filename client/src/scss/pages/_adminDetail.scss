@@ -1,0 +1,176 @@
+.managementDetail {
+    transition: width 0.25s ease, margin 0.25s ease;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    font-family: Rubik, sans-serif;
+
+    .managementDetailInside {
+        background: #000000;
+        padding: 1.875rem 1.75rem;
+        width: 100%;
+        flex-grow: 1;
+
+        .container {
+            .row {
+                .col-md-6 {
+                    display: flex;
+                    align-items: stretch;
+                    margin-bottom: 1.5rem;
+                    justify-content: stretch;
+
+                    .managementDetailInsideCard {
+                        width: 100%;
+                        min-width: 100%;
+                        border-radius: 0.25rem;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        word-wrap: break-word;
+                        background-color: #191c24;
+                        background-clip: border-box;
+                        border: 1px solid rgba(0, 0, 0, 0.125);
+
+                        .managementDetailInsideCardBox {
+                            padding: 1.75rem 1.5625rem;
+                            flex: 1 1 auto;
+                            min-height: 1px;
+
+                            .managementDetailCardBoxTop {
+                                display: flex;
+                                align-items: center;
+
+                                img {
+                                    width: 120px;
+                                }
+
+                                .managementAbout {
+                                    padding-left: 15px;
+
+                                    p {
+                                        color: #6c7293 !important;
+                                        font-size: 20px;
+                                        margin-bottom: 0rem;
+                                    }
+
+                                    span {
+                                        color: #6c7293 !important;
+                                        font-size: 16px;
+
+                                    }
+                                }
+
+
+                            }
+
+                            .productDetailBottom {
+                                margin-top: 20px;
+
+                                p {
+                                    color: #6c7293 !important;
+
+                                }
+                            }
+
+                            .managementGoBackBtn {
+                                margin-top: 40px;
+
+                                a {
+                                    color: #6c7293 !important;
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.lightDetailAdmin1 {
+    .managementDetailInside {
+        background: #f3f3f3;
+
+
+        .container {
+            .row {
+                .col-md-6 {
+
+                    .managementDetailInsideCard {
+                        background-color: #fff;
+                        border: 1px solid #e7eaed;
+
+                        .managementDetailInsideCardBox {
+
+                            .managementDetailCardBoxTop {
+
+
+                                .managementAbout {
+
+                                    p {
+                                        color: #4a4a4a !important;
+                                    }
+
+                                    span {
+                                        color: #4a4a4a !important;
+
+                                    }
+                                }
+
+
+                            }
+
+                            .productDetailBottom {
+
+                                p {
+                                    color: #4a4a4a !important;
+
+                                }
+                            }
+
+                            .managementGoBackBtn {
+                             
+
+                                a {
+                                    color: white !important;
+
+
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width:500px) {
+    .managementDetailInside {
+        padding: 1.875rem 0.75rem !important;
+
+    }
+}
+
+.managementDetailSpinner {
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:400px) {
+    .managementDetailInside {
+        padding: 1.875rem 0.5rem !important;
+
+    }
+}

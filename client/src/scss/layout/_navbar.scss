@@ -1,0 +1,115 @@
+.bg-body{
+    background-color: red !important;
+}
+.bg-body.navbar.navbar-expand-lg.navbar-light.sticky-top {
+    background-color: rgba(30, 60, 87, 0.9) !important;
+    //   border-radius: 0 0 20px 100px;
+    padding: 0.75rem 3rem;
+    font-style: italic;
+    .navbar-brand {
+      color: white !important;
+      font-weight: bolder;
+      letter-spacing: 3px;
+      font-family: "Dancing Script", cursive;
+      font-size: 25px;
+      transition: 1s;
+      button {
+        padding: 1rem;
+      }
+    }
+  
+    .navbar-brand:hover {
+      color: yellow !important;
+    }
+    .navbar-toggler.collapsed {
+      padding: 3px 10px;
+    }
+    .navbar-collapse.collapse {
+      flex-grow: 0;
+      font-weight: 500;
+    }
+    .nav-link {
+      color: white !important;
+      transition: 1s;
+      font-family: "Josefin Sans", sans-serif;
+      font-optical-sizing: auto;
+      // font-weight: <weight>;
+      font-style: normal;
+  
+      div {
+        display: flex;
+        gap: 10px;
+        .langbtn {
+          width: 30px;
+          height: 30px;
+          // padding: 0.1rem 0.5rem;
+          border-radius: 50%;
+          border: none;
+          background-color: rgba(35, 65, 92, 0.9);
+          color: white;
+          font-size: 13px;
+          font-weight: 600;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+    .nav-link:hover {
+      color: rgb(164, 164, 164) !important;
+    }
+    .dropdown-menu.show {
+      // background-color: red;
+  
+      .dropdown-item {
+        button {
+          background-color: white;
+          padding: 0.3rem 0.5rem;
+          border: 1px solid grey;
+          border-radius: 10px;
+        }
+      }
+    }
+    .user_name_box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      gap: 20px;
+      margin: 0 1rem;
+      p {
+        font-size: 15px;
+        color: white;
+      }
+      i {
+        background-color: white;
+        color: rgba(35, 65, 92, 0.9);
+        padding: 0.7rem 0.75rem;
+        border-radius: 50%;
+      }
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .bg-body.navbar.navbar-expand-lg.navbar-light.sticky-top {
+      // background-color: moccasin !important;
+      padding: 0.4rem 2rem;
+      .navbar-brand {
+        font-size: 20px;
+      }
+      .navbar-toggler {
+        padding: 2px 9px;
+        .navbar-toggler-icon {
+          font-size: 13px;
+        }
+      }
+      .navbar-toggler.collapsed {
+        padding: 2px 9px;
+        .navbar-toggler-icon {
+          font-size: 13px;
+        }
+      }
+    }
+  }

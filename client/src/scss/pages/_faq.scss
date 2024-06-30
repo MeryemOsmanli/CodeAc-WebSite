@@ -1,0 +1,383 @@
+.header_image_faq {
+  // background-image: url("https://dt-faryita.myshopify.com/cdn/shop/files/breadcrumb_bc57e145-dc2e-410c-9c11-4c22d1a357eb.png?v=1655187");
+  background-color: #ffc935;
+  // background-color: #ffffff;
+  // bottom: calc(clamp(3.125rem, 2.1154rem + 4.4872vw, 7.5rem) - 1px);
+  right: 0px;
+  width: 100%;
+  min-height: 200px;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  position: relative;
+  .overlay_shop {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    //   font-family: "Josefin Sans", sans-serif;
+    //   font-optical-sizing: auto;
+    //   font-weight: 500;
+    //   text-align: center;
+    //   min-height: 100%;
+    //   color: rgb(63, 87, 14);
+    //   letter-spacing: 5px;
+    //   font-size: 50px;
+    //   background-color: rgba(0, 0, 0, 0);
+    .shoph1 {
+    //   width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 47%;
+      font-size: 3rem;
+      font-family: "Josefin Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    //   background-color: red;
+  }
+  .svg {
+    svg {
+      width: 100%;
+      // height: 1000px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+.faq_background {
+  .faq_text_contain {
+    width: 100%;
+    color: #343434;
+    .faq_head_text {
+      text-align: center;
+      padding: 2rem 0 0 0;
+      width: 100%;
+      font-family: "Josefin Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      h2 {
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        padding: 1rem 0;
+      }
+    }
+    .faq_questions_container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 1rem 1rem;
+      .faq_box {
+        width: 30%;
+        animation-name: fadeIn;
+        -webkit-animation-name: fadeIn;
+        animation-duration: 3s;
+        -webkit-animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-timing-function: ease-in-out;
+        visibility: visible !important;
+        animation-iteration-count: 1;
+
+        @keyframes fadeIn {
+          0% {
+            transform: scale(0);
+            opacity: 0;
+          }
+          60% {
+            transform: scale(1.1);
+          }
+          80% {
+            transform: scale(0.9);
+            opacity: 1;
+          }
+          100% {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+        padding: 1rem;
+        h6 {
+          font-family: "Bad Script", cursive;
+          font-weight: 400;
+        }
+        p {
+          font-size: 14px;
+          font-family: "Bad Script", cursive;
+          font-weight: 400;
+        }
+      }
+      .faq_pay_answer_box {
+        width: 47%;
+        padding: 0 1rem 2rem 0;
+        color: #343434;
+        animation-name: fadeIn;
+        -webkit-animation-name: fadeIn;
+        animation-duration: 3s;
+        -webkit-animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-timing-function: ease-in-out;
+        visibility: visible !important;
+        animation-iteration-count: 1;
+
+        @keyframes fadeIn {
+          0% {
+            transform: scale(0);
+            opacity: 0;
+          }
+          60% {
+            transform: scale(1.1);
+          }
+          80% {
+            transform: scale(0.9);
+            opacity: 1;
+          }
+          100% {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+        h6 {
+          font-family: "Josefin Sans", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 500;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+.faq-pink-sec-background {
+  width: 100%;
+  // height: 600px;
+  background-color: #cfe2ff;
+  .faq-pink-sec {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    // background-color: red;
+    padding: 50px;
+    .faq-pink-left {
+      width: 40%;
+      height: 600px;
+      border-radius: 30px;
+      img {
+        border-radius: 40px;
+
+        width: 100%;
+        height: 100%;
+        // object-fit: cover;
+      }
+    }
+    .faq-pink-right {
+      width: 50%;
+      // height: 400px;
+      // background-color: yellow;
+      // border-radius: 20px;
+      .accordion {
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+font-size: 13px;
+
+        .accordion-item {
+          .accordion-header {
+              button{
+font-size: 15px;
+                  font-family: "Josefin Sans", sans-serif;
+                  font-optical-sizing: auto;
+                  font-weight: 500;
+              }
+          }
+        }
+      }
+      h1 {
+        color: white;
+        padding-bottom: 20px;
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 880px) {
+  .header_image_faq {
+    min-height: 100px;
+    .overlay_shop {
+      letter-spacing: 4px;
+      font-size: 40px;
+    }
+  }
+  .faq_background {
+    .faq_text_contain {
+      .faq_head_text {
+        padding: 2rem 0 0 0;
+        h4 {
+          font-size: 18px;
+        }
+        h2 {
+          font-size: 20px;
+        }
+      }
+      .faq_questions_container {
+        gap: 25px;
+        padding: 0;
+        .faq_box {
+          width: 48%;
+          padding: 0.5rem;
+          h6 {
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+        .faq_pay_answer_box {
+          width: 47%;
+          h6 {
+            font-size: 15px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .faq-pink-sec-background {
+    width: 100%;
+    // height: 600px;
+    min-height: 500px;
+    .faq-pink-sec {
+      gap: 20px;
+      padding: 20px;
+      .faq-pink-left {
+        width: 50%;
+        height: 400px;
+      }
+      .faq-pink-right {
+        width: 50%;
+        h1 {
+          padding-bottom: 10px;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 400px) {
+  .header_image_faq {
+    min-height: 50px;
+    .overlay_shop {
+      letter-spacing: 2px;
+      font-size: 30px;
+      .shoph1 {
+        // width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 42%;
+        font-size: 1.4rem;
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+      }
+      img {
+        width: 100%;
+        height: 90px;
+      }
+    }
+  }
+  .faq_background {
+    .faq_text_contain {
+      .faq_head_text {
+        padding: 2rem 0 0 0;
+        h4 {
+          font-size: 14px;
+        }
+        h2 {
+          font-size: 15px;
+        }
+      }
+      .faq_questions_container {
+        gap: 10px;
+        padding: 0;
+        .faq_box {
+          width: 100%;
+          padding: 1rem 0.5rem;
+          h6 {
+            font-size: 12px;
+          }
+          p {
+            font-size: 10px;
+          }
+        }
+        .faq_pay_answer_box {
+          width: 100%;
+          padding: 1rem 0.5rem 1rem 0.5rem;
+          h6 {
+            font-size: 13px;
+          }
+          p {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+  .faq-pink-sec-background {
+    width: 100%;
+    // height: 600px;
+    min-height: 500px;
+    .faq-pink-sec {
+      gap: 20px;
+      padding: 20px;
+      flex-wrap: wrap;
+      .faq-pink-left {
+        width: 100%;
+        height: 330px;
+      }
+      .faq-pink-right {
+        width: 100%;
+        .accordion {
+          font-size: 10px;
+          font-family: "Josefin Sans", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 500;
+          .accordion-item {
+            .accordion-header {
+                button{
+
+                    font-size: 11px;
+                    font-family: "Josefin Sans", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 500;
+                }
+            }
+          }
+        }
+        h1 {
+          padding: 30px 0;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}

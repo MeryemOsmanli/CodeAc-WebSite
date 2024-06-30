@@ -1,0 +1,363 @@
+.header_image_basket {
+    background-image: url("https://dt-faryita.myshopify.com/cdn/shop/files/breadcrumb_bc57e145-dc2e-410c-9c11-4c22d1a357eb.png?v=1655187");
+    background-color: rgb(120, 200, 0);
+    width: 100%;
+    min-height: 450px;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    position: relative;
+    .overlay_shop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Josefin Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      text-align: center;
+      width: 100%;
+      min-height: 100%;
+      color: rgb(63, 87, 14);
+      letter-spacing: 5px;
+      font-size: 50px;
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+  .basket_section {
+    background-color: rgb(120, 200, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    .basket_container {
+      width: 100%;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .basket_left_image {
+        width: 10%;
+        min-height: 300px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .basket_data_container {
+        width: 80%;
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2rem 0 1rem 0;
+        gap: 3rem;
+        .basket_box {
+          width: 70%;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 1rem;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          animation-name: fadeIn;
+          -webkit-animation-name: fadeIn;
+          animation-duration: 2s;
+          -webkit-animation-duration: 1s;
+          animation-timing-function: ease-in-out;
+          -webkit-animation-timing-function: ease-in-out;
+          visibility: visible !important;
+          animation-iteration-count: 1;
+          background-color: yellowgreen;
+  
+          @keyframes fadeIn {
+            0% {
+              transform: scale(0);
+              opacity: 0;
+            }
+            60% {
+              transform: scale(1.1);
+            }
+            80% {
+              transform: scale(0.9);
+              opacity: 1;
+            }
+            100% {
+              transform: scale(1);
+              opacity: 1;
+            }
+          }
+          .basket_data_image {
+            width: 200px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+              width: 80%;
+              height: 85%;
+            }
+          }
+          .basket_box_text {
+            h5 {
+              font-size: 35px;
+              padding-bottom: 1rem;
+              font-family: "Bad Script", cursive;
+              font-weight: 400;
+            }
+            h4 {
+              margin-top: 2rem;
+            }
+          }
+          .basket_box_btns {
+            display: flex;
+            gap: 2rem;
+            .basket_box_left_btns {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              gap: 20px;
+  
+              div {
+                font-size: 19px;
+                border: 2px solid white;
+                border-radius: 20px;
+                background-color: rgb(120, 200, 0);
+  
+                .button_basket_dec {
+                  border: none;
+                  border-radius: 20px 0 0 20px;
+                  background-color: rgb(120, 200, 0);
+                  padding: 0.2rem 1rem;
+                  font-weight: 500;
+                  color: white;
+                }
+                .button_basket_count {
+                  padding: 0.1rem 0.7rem;
+                  border: 1px solid white;
+                  border-radius: 50%;
+                  background-color: white;
+                }
+                .button_basket_inc {
+                  border: none;
+                  border-radius: 0 20px 20px 0;
+                  background-color: rgb(120, 200, 0);
+                  padding: 0.2rem 1rem;
+                  color: white;
+                }
+              }
+            }
+            .basket_box_right_icon {
+              font-size: 30px;
+              margin-bottom: 8rem;
+            }
+          }
+        }
+      }
+      .basket_right_box {
+        width: 10%;
+      }
+    }
+    .basket_footer_section {
+      width: 55%;
+      // height: 100px;
+      padding: 0.5rem 3rem;
+      height: 100px;
+      // background-color: red;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .total {
+        font-size: 35px;
+        padding-bottom: 1rem;
+        font-family: "Bad Script", cursive;
+        font-weight: 400;
+        color: white;
+        border-bottom: 1px solid white;
+      }
+      button {
+        padding: 0.75rem 2rem;
+        background-color: rgb(120, 200, 0);
+        color: white;
+        border: 2px solid white;
+        border-radius: 30px;
+        font-size: 20px;
+      }
+    }
+  }
+  @media only screen and (max-width: 880px) {
+    .header_image_basket {
+      min-height: 300px;
+      .overlay_shop {
+        letter-spacing: 4px;
+        font-size: 40px;
+      }
+    }
+    .basket_section {
+      .basket_container {
+        .basket_left_image {
+          width: 10%;
+          min-height: 300px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .basket_data_container {
+          width: 100%;
+          padding: 2rem 0 1rem 0;
+          gap: 2rem;
+          .basket_box {
+            width: 100%;
+            padding: 0.5rem;
+            .basket_data_image {
+              width: 180px;
+              height: 160px;
+            }
+            .basket_box_text {
+              h5 {
+                font-size: 20px;
+                padding-bottom: 0.75rem;
+              }
+              h4 {
+                font-size: 20px;
+                margin-top: 2rem;
+              }
+            }
+            .basket_box_btns {
+              gap: 1rem;
+              .basket_box_left_btns {
+                gap: 20px;
+  
+                div {
+                  font-size: 15px;
+                  .button_basket_dec {
+                    padding: 0.2rem 0.8rem;
+                  }
+                  .button_basket_count {
+                    padding: 0.1rem 0.6rem;
+                  }
+                  .button_basket_inc {
+                    padding: 0.2rem 0.8rem;
+                  }
+                }
+              }
+              .basket_box_right_icon {
+                font-size: 20px;
+                margin-bottom: 7rem;
+              }
+            }
+          }
+        }
+        .basket_right_box {
+          width: 10%;
+        }
+      }
+      .basket_footer_section {
+        width: 100%;
+        padding: 0.5rem 4rem;
+        height: 100px;
+        .total {
+          font-size: 28px;
+          padding-bottom: 0.7rem;
+        }
+        button {
+          padding: 0.7rem 1.75rem;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .header_image_basket {
+      min-height: 190px;
+      .overlay_shop {
+        letter-spacing: 3px;
+        font-size: 30px;
+      }
+    }
+    .basket_section {
+      .basket_container {
+        padding: 1rem;
+        .basket_left_image {
+          display: none;
+        }
+        .basket_data_container {
+          width: 100%;
+          padding: 1rem 0;
+          .basket_box {
+            width: 80%;
+            padding: 1rem;
+            flex-wrap: wrap;
+            .basket_data_image {
+              width: 140px;
+              height: 120px;
+              display: block;
+              img {
+                width: 85%;
+                height: 90%;
+              }
+            }
+            .basket_box_text {
+              h5 {
+                font-size: 19px;
+                padding-bottom: 0.1rem;
+              }
+              p {
+                font-size: 15px;
+              }
+              h4 {
+                font-size: 18px;
+                margin-top: 1.5rem;
+              }
+            }
+            .basket_box_btns {
+              gap: 3rem;
+              flex-direction: row;
+              .basket_box_left_btns {
+                gap: 30px;
+  
+                div {
+                  font-size: 15px;
+                  .button_basket_dec {
+                    padding: 0.2rem 0.8rem;
+                  }
+                  .button_basket_count {
+                    padding: 0.1rem 0.6rem;
+                  }
+                  .button_basket_inc {
+                    padding: 0.2rem 0.8rem;
+                  }
+                }
+              }
+              .basket_box_right_icon {
+                margin-bottom: 0rem;
+                margin-left: 2rem;
+              }
+            }
+          }
+        }
+        .basket_right_box {
+          width: 10%;
+          display: none;
+        }
+      }
+      .basket_footer_section {
+        padding: 0.5rem 1rem;
+        height: 80px;
+        .total {
+          font-size: 20px;
+          padding-bottom: 0.5rem;
+        }
+        button {
+          padding: 0.5rem 1.5rem;
+          font-size: 11px;
+        }
+      }
+    }
+  }
