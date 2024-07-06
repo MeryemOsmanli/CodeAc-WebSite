@@ -555,7 +555,7 @@ const generateToken = async ({
     },
     "meryem",
     {
-      expiresIn: "11h",
+      expiresIn: "110h",
     }
   );
 };

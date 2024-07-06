@@ -5,12 +5,11 @@ import { mdiCog, mdiFormatLineSpacing, mdiLogout, mdiMenu, mdiMenuDown, mdiMoonF
 import { useDispatch, useSelector } from 'react-redux'
 import toast from 'react-hot-toast';
 import { useDataContext } from '../../../context/context';
-// import { searchOurTeam } from '../../../redux/slices/ourTeamSlice';
 import { searchQuestions } from '../../../redux/slices/faqSlice';
-// import { searchSubscribers } from '../../../redux/slices/subscribersSlice';
+import { searchSubscribers } from '../../../redux/slices/subscribersSlice';
 import { logOut, searchUser, updateUserIsLogin } from '../../../redux/slices/userSlice';
 import { searchProducts } from '../../../redux/slices/productSlice';
-// import { searchOrder } from '../../../redux/slices/orderSlice';
+import { searchOrder } from '../../../redux/slices/orderSlice';
 import { searchBlog } from '../../../redux/slices/blogSlice';
 const Header = () => {
     const { adminHeadRef, handleAddWidthHeader, handleResSideBar,theme, setTheme } = useDataContext()
@@ -39,7 +38,7 @@ const Header = () => {
                     <li>
                         <div className="headerSearchInputBox  mt-2 mt-md-0 d-none d-lg-flex ">
                             <input
-                                disabled={location.pathname !== 'admin/products' &&
+                                disabled={location.pathname !=='/admin/products' &&
                                     location.pathname !== '/admin/faq' &&
                                     location.pathname !== '/admin/users' &&
                                     location.pathname !== '/admin/subscribers' &&
@@ -67,7 +66,6 @@ const Header = () => {
                                         dispatch(searchOrder(e.target.value))
 
                                     } 
-                                    
                                  
                                 }}
                             />

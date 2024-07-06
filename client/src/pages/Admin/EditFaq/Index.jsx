@@ -1,9 +1,120 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet'
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { useNavigate } from 'react-router';
+import { useDispatch, useSelector } from 'react-redux';
+import { postQuestions, updateQuestions } from '../../../redux/slices/faqSlice';
+import { useDataContext } from '../../../context/context';
+const EditFaq = () => {
+    const { theme } = useDataContext()
+    
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const { oneQuestion } = useSelector(state => state.questions)
+    useEffect(() => {
+        formik.setValues({
+            type: oneQuestion.type,
+            title: oneQuestion.title,
+            content: oneQuestion.content,
+        })
+    }, [oneQuestion])
+    const formik = useFormik({
+        initialValues: {
+            type: "",
+            title: "",
+            content: "",
+        },
+        validationSchema: Yup.object({
+            content: Yup.string()
+                .required('Faq Content Is Required'),
+            type: Yup.string()
+                .required('Faq Type Is Required'),
+            title: Yup.string()
+                .required('Faq title Is Required'),
 
-function EditFaq() {
-  return (
-    <div>EditFaq</div>
-  )
+        }),
+        onSubmit: async (values) => {
+            dispatch(updateQuestions({ id: oneQuestion?._id, newData: values }));
+            formik.resetForm()
+            navigate('/admin/faq')
+        },
+
+    });
+
+    return (
+        <main className={`addManagement ${theme ? " " : "addLight"}`} >
+
+
+            <Helmet>
+                <title>Update Faq</title>
+            </Helmet>
+            <div className="addManagementInside">
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6 col-12">
+                            <div className='addManagementInsideCard'>
+                                <div className="addManagementInsideCardBox">
+                                    <h4 >Update Faq</h4>
+                                    <form onSubmit={formik.handleSubmit}>
+                                        <div className="addManagementFormItem ">
+                                            <label htmlFor="faqTitle">Faq Title</label>
+                                            <input
+                                                onChange={formik.handleChange}
+                                                onBlur={formik.handleBlur}
+                                                value={formik.values.title}
+                                                name='title'
+                                                type="text" id='faqTitle' placeholder='Enter Faq Title' />
+                                            {formik.touched.title && formik.errors.title ? (
+                                                <div className='testimonialError'>{formik.errors.title}</div>
+                                            ) : null}
+
+                                        </div>
+                                        <div className="addManagementFormItem ">
+                                            <label htmlFor="faqType">Faq Type</label>
+                                            <select
+                                                onChange={formik.handleChange}
+                                                onBlur={formik.handleBlur}
+                                                value={formik.values.type}
+                                                name='type'
+                                                id='faqType'
+                                                placeholder='Enter Faq Type'
+                                            >
+                                                <option hidden disabled value={''} defaultValue={''} >Select Type</option>
+                                                <option value={'Answers To Your Questions'}> Answers To Your Questions</option>
+                                                <option value={'Payment Information'}>Payment Information</option>
+                                            </select>
+                                            {formik.touched.type && formik.errors.type ? (
+                                                <div className='testimonialError'>{formik.errors.type}</div>
+                                            ) : null}
+                                        </div>
+                                        <div className="addManagementFormItem ">
+                                            <label htmlFor="faqContent">Faq Content</label>
+                                            <textarea
+                                                onChange={formik.handleChange}
+                                                onBlur={formik.handleBlur}
+                                                value={formik.values.content}
+                                                name='content'
+                                                type="text" id='faqContent' placeholder='Enter Faq Content' cols="30" rows="10"></textarea>
+                                            {formik.touched.content && formik.errors.content ? (
+                                                <div className='testimonialError'>{formik.errors.content}</div>
+                                            ) : null}
+                                        </div>
+
+                                        <div className="managementFormBtn  ">
+                                            <button type='submit ' className='btn btn-outline-warning  w-100'>
+                                                Update
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    )
 }
 
 export default EditFaq

@@ -16,11 +16,11 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use('/faq', router.faq)
-// app.use('/subscriber', router.subscribers)
+app.use('/subscriber', router.subscribers)
 app.use('/sendEmail', router.contact)
 app.use('/users', router.users)
 app.use('/products', router.products)
-// app.use('/orders', router.orders)
+app.use('/orders', router.orders)
 app.use('/blogs', router.blogs)
 
 app.listen(PORT, () => {

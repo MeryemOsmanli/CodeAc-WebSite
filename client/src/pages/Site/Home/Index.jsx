@@ -1,11 +1,51 @@
-import React from "react";
+import { useFormik } from "formik";
+import React, { useRef } from "react";
 import { Helmet } from "react-helmet-async";
-
+import { useDispatch, useSelector } from "react-redux";
+import { postSubscribers } from "../../../redux/slices/subscribersSlice";
+import * as Yup from "yup";
+import { useTranslation } from "react-i18next";
+import toast from "react-hot-toast";
 function Home() {
+  const { subscribers } = useSelector((state) => state.subscribers);
+  const submitRef = useRef();
+  const dispatch = useDispatch();
+  const subscribeRef = useRef(null);
+  const { t, i18n } = useTranslation();
+  const formik = useFormik({
+    initialValues: {
+      subscriberGmail: "",
+    },
+    validationSchema: Yup.object({
+      subscriberGmail: Yup.string().email("Invalid email address"),
+    }),
+    onSubmit: async (values) => {
+      const emailExists = subscribers.some(
+        (user) => user.subscriberGmail === values.subscriberGmail
+      );
+      if (emailExists) {
+        toast.error(
+          "Email already exists. Please use a different email address.",
+          {
+            position: "bottom-left",
+          }
+        );
+      } else {
+        const response = await dispatch(postSubscribers(values));
+        if (response.payload !== undefined) {
+          submitRef.current.classList.replace("d-none", "d-flex");
+          formik.resetForm();
+          setTimeout(() => {
+            submitRef.current.classList.replace("d-flex", "d-none");
+          }, 2000);
+        }
+      }
+    },
+  });
   return (
     <>
       <Helmet>
-        <title>home </title>  
+        <title>home </title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
       {/*  start first section grayfurt */}
@@ -142,7 +182,9 @@ function Home() {
           <div className="left-box-location">
             <div>
               <h1>Locations</h1>
-              <a href=""><button>See Location</button></a>
+              <a href="">
+                <button>See Location</button>
+              </a>
             </div>
           </div>
           <div className="middle-box-location">
@@ -168,17 +210,42 @@ function Home() {
 
       {/* start seventh section email  */}
       <div className="email-sec-background">
-     <div className="email-sec">
-     <div className="left-box-email">
-          <img src="https://ohlala.bold-themes.com/main-demo/wp-content/uploads/sites/3/2017/09/inner_ice_creams_07.jpg" alt="" />
+        <div className="email-sec">
+          <div className="left-box-email">
+            <img
+              src="https://ohlala.bold-themes.com/main-demo/wp-content/uploads/sites/3/2017/09/inner_ice_creams_07.jpg"
+              alt=""
+            />
+          </div>
+          <div className="right-box-email">
+            <div>
+              {/* <input type="text" placeholder="Enter your email"/>
+         <button>GO</button> */}
+              <form onSubmit={formik.handleSubmit}>
+                <input
+                  ref={subscribeRef}
+                  type="email"
+                  value={formik.values.subscriberGmail}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  name="subscriberGmail"
+                  placeholder="Your email address"
+                />
+                  <button disabled={!subscribeRef.current?.value} type="submit">
+                  GO
+                  </button>
+              </form>
+            {formik.touched.subscriberGmail && formik.errors.subscriberGmail ? (
+              <small style={{ color: "red" }}>
+                {formik.errors.subscriberGmail}
+              </small>
+            ) : null}
+          <p className="d-none text-success" ref={submitRef}>
+          {t("thankssubscribe")}
+          </p>
+            </div>
+          </div>
         </div>
-        <div className="right-box-email">
-        <div>
-         <input type="text" placeholder="Enter your email"/>
-         <button>GO</button>
-        </div>
-        </div>
-     </div>
       </div>
       {/* end seventh section email  */}
       {/* start eighth section shop */}
@@ -188,11 +255,16 @@ function Home() {
             <div>
               <span>GET DAILY DISCOUNTS!</span>
               <h1>Visit our online shop</h1>
-              <a href=""><button>VISIT</button></a>
+              <a href="">
+                <button>VISIT</button>
+              </a>
             </div>
           </div>
           <div className="right-box-shop">
-            <img src="https://ohlala.bold-themes.com/main-demo/wp-content/uploads/sites/3/2017/09/inner_ice_creams_08.jpg" alt="" />
+            <img
+              src="https://ohlala.bold-themes.com/main-demo/wp-content/uploads/sites/3/2017/09/inner_ice_creams_08.jpg"
+              alt=""
+            />
           </div>
         </div>
       </div>

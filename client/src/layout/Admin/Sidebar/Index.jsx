@@ -18,10 +18,10 @@ const Sidebar = () => {
         <div className={`sidebar ${theme ? '' : "sideBarLightMode"}  `} style={{ display: location.pathname == '/admin/loginAdmin' || location.pathname == '/admin/adminRegister' ? 'none' : '' }} ref={sideBardHeadRef}>
             <div className="sidebarTop  d-none d-lg-flex align-items-center justify-content-center fixed-top">
                 <Link to={'/admin'} style={{ color: "white" }} className='sidebarTopLink1'>
-                    JuIce-creaMery
+                   MaRainbow
                 </Link>
                 <Link to={'/admin'} style={{ color: "white" }} className='sidebarTopLink2'>
-                    JM
+                    MR
                 </Link>
             </div>
             <ul className="sidebarBottom">
@@ -180,7 +180,6 @@ const Sidebar = () => {
                     </Link>
                 </li>
 
- 
 
                 <li className={`sidebarBottomLinks navMenu ${location.pathname === '/admin/addBlog' ? "navMenuActive" : ""}`} >
                     <Link to={'/admin/addBlog'}>

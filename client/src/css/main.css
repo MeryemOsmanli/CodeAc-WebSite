@@ -1797,11 +1797,14 @@
   align-items: center;
   justify-content: center;
 }
-.email-sec-background .email-sec .right-box-email div {
+.email-sec-background .email-sec .right-box-email div p {
+  margin: 1rem 0;
+}
+.email-sec-background .email-sec .right-box-email div form {
   display: flex;
   gap: 50px;
 }
-.email-sec-background .email-sec .right-box-email div button {
+.email-sec-background .email-sec .right-box-email div form button {
   padding: 0.8rem 2rem;
   border-radius: 20px;
   border: none;
@@ -1809,18 +1812,18 @@
   color: rgba(255, 255, 255, 0.612);
   letter-spacing: 2px;
 }
-.email-sec-background .email-sec .right-box-email div input {
+.email-sec-background .email-sec .right-box-email div form input {
   padding: 0.8rem 3rem;
   border-radius: 20px;
   border: none;
   background-color: #ff4461;
 }
-.email-sec-background .email-sec .right-box-email div ::placeholder {
+.email-sec-background .email-sec .right-box-email div form ::placeholder {
   color: white;
   opacity: 0.6;
   letter-spacing: 2px; /* Firefox */
 }
-.email-sec-background .email-sec .right-box-email div ::-ms-input-placeholder {
+.email-sec-background .email-sec .right-box-email div form ::-ms-input-placeholder {
   /* Edge 12 -18 */
   color: white;
 }
