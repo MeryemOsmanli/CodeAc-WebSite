@@ -8,6 +8,7 @@ import { clearBasket } from "../../../redux/slices/userSlice";
 import { useNavigate } from "react-router";
 import toast from "react-hot-toast";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 function Checkout() {
   const { t, i18n } = useTranslation();
 
@@ -79,7 +80,12 @@ function Checkout() {
     },
   });
   return (
+    
     <div>
+      <Helmet>
+        <title>Checkout</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
       <form onSubmit={formik.handleSubmit}>
         <div className="checkout_background">
           <div className="checkout_contain">

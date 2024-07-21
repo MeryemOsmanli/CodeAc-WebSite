@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
 import { getOneBlog } from "../../../redux/slices/blogSlice";
 import moment from "moment";
+import { Helmet } from 'react-helmet';
 
 function BlogDetail() {
   const { oneBlog } = useSelector((state) => state.blogs);
@@ -13,6 +14,10 @@ function BlogDetail() {
   }, [id]);
   return (
     <>
+    <Helmet>
+        <title>blogdetail</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
            <div className="blog_detail_background">
         <div className="blog_detail_contain">
           <div className="blog_detail_header">

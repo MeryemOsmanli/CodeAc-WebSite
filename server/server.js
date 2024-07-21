@@ -16,6 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use('/faq', router.faq)
+app.use('/ourTeam', router.ourTeam)
 app.use('/subscriber', router.subscribers)
 app.use('/sendEmail', router.contact)
 app.use('/users', router.users)

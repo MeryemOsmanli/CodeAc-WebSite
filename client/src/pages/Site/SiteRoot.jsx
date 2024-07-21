@@ -9,12 +9,15 @@ import { getAllSubscribers } from "../../redux/slices/subscribersSlice";
 import { getAllUsers, getUserToken } from "../../redux/slices/userSlice";
 import { getAllProducts } from "../../redux/slices/productSlice";
 import { getAllBlog } from "../../redux/slices/blogSlice";
+import { getAllOurTeam } from "../../redux/slices/ourTeamSlice";
+
 
 const SiteRoot = () => {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(getAllQuestions())
     dispatch(getAllOrders())
+    dispatch(getAllOurTeam())
     dispatch(getAllSubscribers())
     dispatch(getAllUsers())
     dispatch(getAllProducts())

@@ -1,5 +1,7 @@
 import React from "react";
 import { Accordion } from "react-bootstrap";
+import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 
 function Faq() {
@@ -8,8 +10,14 @@ function Faq() {
   const firstType = questions.filter(
     (x) => x.type == "Answers To Your Questions"
   );
+  const { t, i18n } = useTranslation();
+
 const secondType = questions.filter((x) => x.type == "Payment Information");
   return <>
+  <Helmet>
+        <title>{t("faq")}</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
          {/* faq header section start */}
          <div className="header_image_faq">
         <div className="overlay_shop">

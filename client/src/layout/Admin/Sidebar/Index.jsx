@@ -179,6 +179,19 @@ const Sidebar = () => {
                         </span>
                     </Link>
                 </li>
+                <li className={`sidebarBottomLinks navMenu ${location.pathname === '/admin/ourTeam' ? "navMenuActive" : ""}`} >
+                    <Link to={'/admin/ourTeam'}>
+                        <div className="navMenuIcon text-secondary">
+                            <span>
+                                <Icon path={mdiAccountMultiple} size={0.8} />
+
+                            </span>
+                        </div>
+                        <span className="navMenuText">
+                            Our Team
+                        </span>
+                    </Link>
+                </li>
 
 
                 <li className={`sidebarBottomLinks navMenu ${location.pathname === '/admin/addBlog' ? "navMenuActive" : ""}`} >
@@ -195,7 +208,19 @@ const Sidebar = () => {
                     </Link>
                 </li>
 
+                <li className={`sidebarBottomLinks navMenu ${location.pathname === '/admin/addOurTeam' ? "navMenuActive" : ""}`} >
+                    <Link to={'/admin/addOurTeam'}>
+                        <div className="navMenuIcon text-danger">
+                            <span>
+                                <Icon path={mdiAccountGroup} size={0.8} />
 
+                            </span>
+                        </div>
+                        <span className="navMenuText">
+                            Add Team
+                        </span>
+                    </Link>
+                </li>
                 <li className={`sidebarBottomLinks navMenu ${location.pathname === '/admin/addFaq' ? "navMenuActive" : ""}`} >
                     <Link to={'/admin/addFaq'}>
                         <div className="navMenuIcon text-primary">

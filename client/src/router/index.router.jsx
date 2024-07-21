@@ -2,16 +2,21 @@ import AddBlog from "../pages/Admin/AddBlog/Index";
 import AddFaq from "../pages/Admin/AddFaq/Index";
 import AddProduct from "../pages/Admin/AddProduct/Index";
 import AdminRoot from "../pages/Admin/AdminRoot";
+import AddOurTeam from "../pages/Admin/AddOurTeam/Index";
 import BlogAdminDetail from "../pages/Admin/BlogDetail/Index";
 import BlogsTable from "../pages/Admin/Blogs/Index";
 import Dashboard from "../pages/Admin/Dashboard/Index";
 import EditFaq from "../pages/Admin/EditFaq/Index";
+import EditOurTeam from "../pages/Admin/EditOurTeam/Index";
 import UpdateProduct from "../pages/Admin/EditProduct/Index";
 import FaqAdmin from "../pages/Admin/Faq/Index";
 import FaqDetail from "../pages/Admin/FaqDetail/Index";
 import OrderDetail from "../pages/Admin/OrderDetail/Index";
 import Orders from "../pages/Admin/Orders/Index";
 import ProductDetail from "../pages/Admin/ProductDetail/Index";
+import OurTeamDetail from "../pages/Admin/OurTeamDetail/Index";
+import OurTeam from "../pages/Admin/OurTeamTable/Index";
+
 import ProductsTable from "../pages/Admin/Products/Index";
 import Subscribers from "../pages/Admin/Subscribers/Index";
 import UpdateBlog from "../pages/Admin/UpdateBlog/Index";
@@ -24,6 +29,7 @@ import Contact from "../pages/Site/Contact/Index";
 import Detail from "../pages/Site/Detail/Index";
 import Faq from "../pages/Site/Faq/Index";
 import Home from "../pages/Site/Home/Index";
+import Team from "../pages/Site/Team/Index";
 import Login from "../pages/Site/Login/Index";
 import OrderSuccess from "../pages/Site/OrderSuccess/Index";
 import Register from "../pages/Site/Register/Index";
@@ -43,6 +49,10 @@ const ROUTER =[
           {
             path: "contact",
             element: <Contact />
+          },
+          {
+            path: "team",
+            element: <Team />
           },
           {
             path: "shop",
@@ -97,6 +107,22 @@ const ROUTER =[
           {
             path: "",
             element: <Dashboard />,
+          },
+          {
+            path: "addOurTeam",
+            element: <AddOurTeam />,
+          },
+          {
+            path: "ourTeam",
+            element: <OurTeam />,
+          },
+          {
+            path: "ourTeam/:id",
+            element: <OurTeamDetail />,
+          },
+          {
+            path: "ourTeam/edit/:id",
+            element: <EditOurTeam />,
           },
           {
             path: "addFaq",

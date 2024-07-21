@@ -5,6 +5,7 @@ import orderSlice from './slices/orderSlice';
 import userSlice from './slices/userSlice';
 import productSlice from './slices/productSlice';
 import blogSlice from './slices/blogSlice';
+import ourTeamSlice from './slices/ourTeamSlice';
 
 const store = configureStore({
     reducer: {
@@ -13,7 +14,8 @@ const store = configureStore({
         orders: orderSlice,
         users: userSlice,
         products: productSlice,
-        blogs: blogSlice
+        blogs: blogSlice,
+        ourTeam: ourTeamSlice,
 
     }
 })

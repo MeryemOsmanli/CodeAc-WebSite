@@ -33,9 +33,23 @@ const Header = () => {
             >
               <Nav.Link href="/">{t("home")}</Nav.Link>
               <Nav.Link href="/contact">{t("contact")}</Nav.Link>
-              <Nav.Link href="/blogs">{t("blogs")}</Nav.Link>
+              {/* <Nav.Link href="/blogs">{t("blogs")}</Nav.Link> */}
               <Nav.Link href="/shop">{t("shop")}</Nav.Link>
-              <Nav.Link href="/faq">{t("faq")}</Nav.Link>
+              <Nav.Link href="/team">{t("team")}</Nav.Link>
+              {/* <NavDropdown.Item href="/team">{t("team")}</NavDropdown.Item> */}
+              {/* <Nav.Link href="/faq">{t("faq")}</Nav.Link> */}
+              <NavDropdown
+                  title={t("aboutus")}
+                  id="navbarScrollingDropdown"
+                >
+                  <NavDropdown.Item href="/faq">
+                    {t("faq")}
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="/blogs">
+                    {t("blogs")}
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                </NavDropdown>
 
               {userToken?.isLogin == true ? (
                 ""

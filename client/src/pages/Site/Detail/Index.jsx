@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
 import { getOneProducts } from "../../../redux/slices/productSlice";
+import { Helmet } from 'react-helmet';
 
 function Detail() {
   const { id } = useParams()
@@ -12,6 +13,10 @@ function Detail() {
   }, [id])
   return (
     <>
+    <Helmet>
+        <title>DetailProduct</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
           {/* detail header section start */}
       <div className="header_image_detail">
         <div className="overlay_shop">

@@ -2,12 +2,18 @@ import React from "react";
 import { useSelector } from "react-redux";
 import moment from "moment";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 function Blogs() {
   const { blogs } = useSelector((state) => state.blogs);
+  const { t, i18n } = useTranslation();
 
   return <>
-    
+    <Helmet>
+        <title>{t("blogs")}</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
     <div className="blog_background">
         <div className="blog_contain">
           {/* <div className="blog_header">

@@ -5891,4 +5891,271 @@ ul {
   .questionDetailInside {
     padding: 1.875rem 0.5rem !important;
   }
+}
+.hero_team {
+  background-image: url("https://static.vecteezy.com/system/resources/previews/030/648/766/non_2x/a-juice-bar-featuring-fresh-vegetable-and-fruit-free-photo.jpg");
+  width: 100%;
+  min-height: 450px;
+  background-size: cover;
+  background-position: center;
+}
+
+.team_text_box {
+  width: 100%;
+  height: 150px;
+  background-color: rgb(254, 229, 162);
+  text-align: center;
+  padding-top: 3rem;
+}
+.team_text_box h2 {
+  font-size: 40px;
+  letter-spacing: 3px;
+  font-family: "Bad Script", cursive;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.team_contain_box {
+  background-color: rgb(254, 229, 162);
+  padding: 1rem 0 5rem 0;
+}
+.team_contain_box .team_contain {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.team_contain_box .team_contain .cardDiv {
+  width: 30%;
+  height: 550px;
+  text-align: center;
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+  animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  visibility: visible !important;
+  animation-iteration-count: 1;
+}
+@keyframes fadeIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.team_contain_box .team_contain .cardDiv img {
+  height: 80%;
+  width: 100%;
+  object-fit: cover;
+}
+.team_contain_box .team_contain .cardDiv .cardName {
+  font-size: 30px;
+  padding: 10px 0;
+}
+.team_contain_box .team_contain .cardDiv .cardPosition {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.offer_sec {
+  width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+}
+.offer_sec .offer_image {
+  background-color: rgb(254, 229, 162);
+  width: 100%;
+  height: 100px;
+}
+.offer_sec .offer_image img {
+  width: 100%;
+  height: 100%;
+}
+.offer_sec .offer_form {
+  width: 100%;
+  padding: 50px 100px;
+  background-color: rgb(254, 229, 162);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.offer_sec .offer_form .offer_form_head {
+  width: 100%;
+  text-align: center;
+}
+.offer_sec .offer_form .offer_form_head h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+.offer_sec .offer_form .offer_form_parag {
+  width: 100%;
+  text-align: center;
+}
+.offer_sec .offer_form .offer_form_parag p {
+  font-size: 40px;
+  font-style: normal;
+}
+.offer_sec .offer_form .offer_form_inp_btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.offer_sec .offer_form .offer_form_inp_btn .offer_inp {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+.offer_sec .offer_form .offer_form_inp_btn .offer_inp form {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.offer_sec .offer_form .offer_form_inp_btn .offer_inp form input {
+  width: 60%;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: rgb(254, 229, 162);
+}
+.offer_sec .offer_form .offer_form_inp_btn .offer_inp form .offer_btn {
+  width: 40%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.offer_sec .offer_form .offer_form_inp_btn .offer_inp form .offer_btn button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: rgb(254, 229, 162);
+  color: grey;
+}
+
+@media only screen and (max-width: 880px) {
+  .hero_team {
+    min-height: 290px;
+  }
+  .team_text_box {
+    height: 120px;
+    padding-top: 2rem;
+  }
+  .team_text_box h2 {
+    font-size: 35px;
+    letter-spacing: 2px;
+  }
+  .team_contain_box .team_contain {
+    gap: 20px;
+  }
+  .team_contain_box .team_contain .cardDiv {
+    width: 45%;
+    height: 470px;
+  }
+  .team_contain_box .team_contain .cardDiv .cardName {
+    font-size: 20px;
+  }
+  .team_contain_box .team_contain .cardDiv .cardPosition {
+    font-size: 15px;
+  }
+  .offer_sec .offer_image {
+    height: 80px;
+  }
+  .offer_sec .offer_form {
+    padding: 50px 100px;
+  }
+  .offer_sec .offer_form .offer_form_head h2 {
+    font-size: 30px;
+  }
+  .offer_sec .offer_form .offer_form_parag p {
+    font-size: 30px;
+  }
+  .offer_sec .offer_form .offer_form_inp_btn .offer_inp form {
+    width: 80%;
+    gap: 10px;
+  }
+  .offer_sec .offer_form .offer_form_inp_btn .offer_inp form input {
+    width: 70%;
+    padding: 10px;
+  }
+  .offer_sec .offer_form .offer_form_inp_btn .offer_inp form .offer_btn button {
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .hero_team {
+    min-height: 170px;
+  }
+  .team_text_box {
+    height: 100px;
+    padding-top: 2rem;
+  }
+  .team_text_box h2 {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+  .team_contain_box {
+    padding: 1rem 0 3rem 0;
+  }
+  .team_contain_box .team_contain {
+    gap: 30px;
+  }
+  .team_contain_box .team_contain .cardDiv {
+    padding-bottom: 1.5rem;
+    width: 100%;
+    height: 410px;
+    border-bottom: 1px solid grey;
+  }
+  .offer_sec .offer_image {
+    height: 60px;
+  }
+  .offer_sec .offer_form {
+    padding: 50px 0px;
+  }
+  .offer_sec .offer_form .offer_form_head h2 {
+    font-size: 20px;
+  }
+  .offer_sec .offer_form .offer_form_parag p {
+    font-size: 17px;
+  }
+  .offer_sec .offer_form .offer_form_inp_btn .offer_inp form {
+    width: 80%;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .offer_sec .offer_form .offer_form_inp_btn .offer_inp form input {
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+  .offer_sec .offer_form .offer_form_inp_btn .offer_inp form .offer_btn {
+    width: 50%;
+    height: 60px;
+  }
+  .offer_sec .offer_form .offer_form_inp_btn .offer_inp form .offer_btn button {
+    padding: 5px;
+    font-size: 13px;
+  }
 }/*# sourceMappingURL=main.css.map */

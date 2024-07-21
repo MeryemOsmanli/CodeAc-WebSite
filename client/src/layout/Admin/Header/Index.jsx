@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import Icon from '@mdi/react';
+import { searchOurTeam } from '../../../redux/slices/ourTeamSlice';
 import { mdiCog, mdiFormatLineSpacing, mdiLogout, mdiMenu, mdiMenuDown, mdiMoonFull, mdiWeatherNight, mdiWhiteBalanceSunny } from '@mdi/js';
 import { useDispatch, useSelector } from 'react-redux'
 import toast from 'react-hot-toast';
@@ -43,7 +44,8 @@ const Header = () => {
                                     location.pathname !== '/admin/users' &&
                                     location.pathname !== '/admin/subscribers' &&
                                     location.pathname !== '/admin/orders' &&
-                                    location.pathname !== '/admin/blogs' 
+                                    location.pathname !== '/admin/blogs' &&
+                                    location.pathname!=='/admin/ourTeam'
 
                                 }
                                 type="text" placeholder='Search '
@@ -65,7 +67,9 @@ const Header = () => {
                                     } else if (location.pathname == '/admin/orders') {
                                         dispatch(searchOrder(e.target.value))
 
-                                    } 
+                                    } else if(location.pathname == '/admin/ourTeam'){
+                                        dispatch(searchOurTeam(e.target.value))
+                                    }
                                  
                                 }}
                             />
